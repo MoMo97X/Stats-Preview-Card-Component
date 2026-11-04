@@ -1,0 +1,148 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+    font-size: normal;
+    font-display: swap;
+    font-weight: 400 900;
+}
+
+@font-face {
+    font-family: "lexend";
+    src: url(../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+    font-size: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+
+:root{
+    /* ### Primary ### */
+    --Navy-950-mainbackground: #090b1a;
+    --Blue-950-cardbackground: #1c1a38;
+    --Purple-500-accent: #aa5cdb;
+    /* ### Neutral ### */
+    --White-mainheading-stats: #ffffff;
+    --White-mainparagraph: #ffffffbf;
+    --White-statheadings: #ffffff99;
+    /* ### font size,weight ### */
+    --F-size: 15px;
+    --fw-400-Lexend: 400;
+    --fw-400-inter: 400;
+    --fw-700-inter: 700;
+    /* ### padding,margin ### */
+    --pad-y: 1.5rem;
+    --pad-x: 1.15rem;
+    --pad: 1.25rem; 
+}
+
+body{
+    margin:0;
+    padding: var(--pad);
+    height: 100vh;
+    font-size: var(--F-size);
+    background-color: var(--Navy-950-mainbackground);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.card{
+    max-width: 22.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--Blue-950-cardbackground);
+}
+
+.card picture{
+    position: relative;
+    background-blend-mode: color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem ;
+}
+
+picture::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: var(--Purple-500-accent);
+    mix-blend-mode: multiply;
+}
+
+.card .card-body{
+    padding: var(--pad);
+}
+
+.card-body .title{
+    color: var(--White-mainheading-stats);
+    font-family: "inter","Lexend",Arial, Helvetica, sans-serif;
+    font-size: calc(var(--F-size) + 5vw);
+    font-weight: 600;
+}
+
+.title span{
+    color:var(--Purple-500-accent)
+}
+
+.description{
+    margin-block-end: 2.5rem;
+    color: var(--White-mainparagraph);
+    font-size: calc(var(--F-size) + 0.75vw);
+    font-family: "lexend","inter",Arial, Helvetica, sans-serif;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.stats div{
+    /* padding: var(--pad-y) var(--pad-x); */
+
+    & span:first-child{
+        display: block;
+        margin-block-end: 0.5rem;
+        color: var(--White-mainheading-stats);
+        font-weight: 700;
+        font-size: calc(var(--F-size) + 2.5vw);
+        font-family: "lexend",Arial, Helvetica, sans-serif;
+    }
+
+    & span:last-child{
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--White-statheadings);
+        font-family: "lexend","inter";
+        font-weight: 400;
+        font-size: calc(var(--F-size) - 0.5vw);
+    }
+}
+
+@media  (min-width: 40rem){
+    
+    body{
+        flex-direction: row;
+        padding: clamp(1.5rem, 1vw, 3rem);
+    }
+
+    .card{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
