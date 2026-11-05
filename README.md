@@ -78,4 +78,4 @@ Users should be able to:
 ## Author
 
 - Website - [Github repo](https://github.com/MoMo97X/Stats-Preview-Card-Component)
-- Frontend Mentor - [@muhammedarrujbani](https://www.frontendmentor.io/profile/muhammedarrujbani)
+- Frontend Mentor - [@muhammedarrujbani](https://www.frontendmentor.io/profile/MoMo97X)
