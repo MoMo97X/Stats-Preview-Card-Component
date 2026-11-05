@@ -23,15 +23,18 @@
     --Navy-950-mainbackground: #090b1a;
     --Blue-950-cardbackground: #1c1a38;
     --Purple-500-accent: #aa5cdb;
+
     /* ### Neutral ### */
     --White-mainheading-stats: #ffffff;
     --White-mainparagraph: #ffffffbf;
     --White-statheadings: #ffffff99;
+
     /* ### font size,weight ### */
-    --F-size: 15px;
+    --F-size: 0.94rem;
     --fw-400-Lexend: 400;
     --fw-400-inter: 400;
     --fw-700-inter: 700;
+
     /* ### padding,margin ### */
     --pad-y: 1.15rem;
     --pad-x: 1.15rem;
@@ -81,14 +84,12 @@ picture::before{
 }
 
 .card .card-body{
-    /* padding: var(--pad); */
-      padding-inline: clamp(1rem, 1rem + 2vw, 3rem);
+    padding-inline: clamp(1rem, 1rem + 2vw, 3rem);
 }
 
 .card-body .title{
     color: var(--White-mainheading-stats);
     font-family: "inter","Lexend",Arial, Helvetica, sans-serif;
-    /* font-size: calc(var(--F-size) + 5vw); */
     font-size: clamp(1rem, 1.25rem + 2.5vw, 1.8rem);
     font-weight: 600;
 }
@@ -98,9 +99,7 @@ picture::before{
 }
 
 .description{
-    /* margin-block-end: 2.5rem; */
     color: var(--White-mainparagraph);
-    /* font-size: calc(var(--F-size) + 0.75vw); */
     font-size: clamp(1rem, 0.5rem + 0.5vw, 1.8rem);
     font-family: "lexend","inter",Arial, Helvetica, sans-serif;
 }
@@ -108,7 +107,6 @@ picture::before{
 .stats{
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 1rem; */
 }
 
 .stats div{
@@ -126,7 +124,7 @@ picture::before{
 
     & span:last-child{
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 0.1rem;
         color: var(--White-statheadings);
         font-size: calc(var(--F-size) - 0.5vw);
         font-weight: 400;
@@ -140,7 +138,6 @@ picture::before{
         grid-template-columns: repeat(2,1fr);
     }
 }
-
 
 /* #### large #### 960px */
 @media  (min-width: 50rem){
